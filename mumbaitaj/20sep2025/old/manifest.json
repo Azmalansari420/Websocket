@@ -1,0 +1,15 @@
+{
+  "background_color": "var(--primary)",
+  "description": "PetPerks Pet Care Store Ecommerce Mobile App Template ( Bootstrap + PWA ) | DexignZone",
+  "display": "standalone",
+  "icons": [
+	{
+	  "src": "assets/images/app-logo/pwa150x150.png",
+	  "sizes": "150x150",
+	  "type": "image/png"
+	}
+  ],
+  "name": "PetPerks Pet Care Store Ecommerce Mobile App Template",
+  "short_name": "PetPerks",
+  "start_url": "index.html"
+}

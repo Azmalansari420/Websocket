@@ -1,0 +1,490 @@
+.centeredTop1Green,
+.centeredTop1Red {
+    position: absolute;
+    top: 10.8%;
+    transform: translate(-50%, -50%)
+}
+
+.centeredTop1,
+.centeredTop1Green,
+.centeredTop1Red,
+.centeredTop2,
+.centeredTop3,
+.centeredTop4,
+.centeredTop5 {
+    transform: translate(-50%, -50%)
+}
+
+html {
+    height: 100%
+}
+
+.buttonRed,
+.buttonRedSm {
+    -webkit-border-radius: 10px;
+    height: 10px;
+    color: #FFF;
+    cursor: pointer;
+    font-family: Arial;
+    font-size: 20px;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center
+}
+
+.buttonRed {
+    background-color: #B20000!important;
+    border-radius: 4px;
+    border: none;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .3);
+    padding: 5px 30px
+}
+
+.GlowRed {
+    -webkit-animation: glowing 1.5s infinite;
+    -moz-animation: glowing 1.5s infinite;
+    -o-animation: glowing 1.5s infinite;
+    animation: glowing 1.5s infinite
+}
+
+@-webkit-keyframes glowing {
+    0%,
+    100% {
+        background-color: #B20000;
+        -webkit-box-shadow: 0 0 3px #B20000
+    }
+    50% {
+        background-color: red;
+        -webkit-box-shadow: 0 0 40px red
+    }
+}
+
+@-moz-keyframes glowing {
+    0%,
+    100% {
+        background-color: #B20000;
+        -moz-box-shadow: 0 0 3px #B20000
+    }
+    50% {
+        background-color: red;
+        -moz-box-shadow: 0 0 40px red
+    }
+}
+
+@-o-keyframes glowing {
+    0%,
+    100% {
+        background-color: #B20000;
+        box-shadow: 0 0 3px #B20000
+    }
+    50% {
+        background-color: red;
+        box-shadow: 0 0 40px red
+    }
+}
+
+@keyframes glowing {
+    0%,
+    100% {
+        background-color: #B20000;
+        box-shadow: 0 0 3px #B20000
+    }
+    50% {
+        background-color: red;
+        box-shadow: 0 0 40px red
+    }
+}
+
+.buttonRedSm {
+    background-color: #B20000!important;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .3);
+    padding: 5px
+}
+
+.GlowRedSm {
+    -webkit-animation: glowingSm 1.5s infinite;
+    -moz-animation: glowingSm 1.5s infinite;
+    -o-animation: glowingSm 1.5s infinite;
+    animation: glowingSm 1.5s infinite
+}
+
+@-webkit-keyframes glowingSm {
+    0%,
+    100% {
+        background-color: #B20000;
+        -webkit-box-shadow: 0 0 3px #B20000
+    }
+    50% {
+        background-color: red;
+        -webkit-box-shadow: 0 0 40px red
+    }
+}
+
+@-moz-keyframes glowingSm {
+    0%,
+    100% {
+        background-color: #B20000;
+        -moz-box-shadow: 0 0 3px #B20000
+    }
+    50% {
+        background-color: red;
+        -moz-box-shadow: 0 0 40px red
+    }
+}
+
+@-o-keyframes glowingSm {
+    0%,
+    100% {
+        background-color: #B20000;
+        box-shadow: 0 0 3px #B20000
+    }
+    50% {
+        background-color: red;
+        box-shadow: 0 0 40px red
+    }
+}
+
+@keyframes glowingSm {
+    0%,
+    100% {
+        background-color: #B20000;
+        box-shadow: 0 0 3px #B20000
+    }
+    50% {
+        background-color: red;
+        box-shadow: 0 0 40px red
+    }
+}
+
+.buttonGreen {
+    background-color: #2e562a!important;
+    -webkit-border-radius: 10px;
+    border-radius: 4px;
+    border: none;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .3);
+    color: #FFF;
+    cursor: pointer;
+    height: 15px;
+    display: inline-block;
+    font-family: Arial;
+    font-size: 20px;
+    padding: 5px 30px;
+    text-align: center;
+    text-decoration: none
+}
+
+.WhiteBoxLeft p,
+.WhiteBoxLeftGreen p,
+.WhiteBoxLeftRed p,
+.WhiteBoxRight p {
+    color: red;
+    text-shadow: 5px 5px 5px #000;
+    font-weight: 600;
+    font-size: 65px
+}
+
+.GlowGreen {
+    -webkit-animation: glowing1 1.5s infinite;
+    -moz-animation: glowing1 1.5s infinite;
+    -o-animation: glowing1 1.5s infinite;
+    animation: glowing1 1.5s infinite
+}
+
+@-webkit-keyframes glowing1 {
+    0%,
+    100% {
+        background-color: #2e562a;
+        -webkit-box-shadow: 0 0 3px #2e562a
+    }
+    50% {
+        background-color: #b7db33;
+        -webkit-box-shadow: 0 0 40px #b7db33
+    }
+}
+
+@-moz-keyframes glowing1 {
+    0%,
+    100% {
+        background-color: #2e562a;
+        -moz-box-shadow: 0 0 3px #2e562a
+    }
+    50% {
+        background-color: #b7db33;
+        -moz-box-shadow: 0 0 40px #b7db33
+    }
+}
+
+@-o-keyframes glowing1 {
+    0%,
+    100% {
+        background-color: #2e562a;
+        box-shadow: 0 0 3px #2e562a
+    }
+    50% {
+        background-color: #b7db33;
+        box-shadow: 0 0 40px #b7db33
+    }
+}
+
+@keyframes glowing1 {
+    0%,
+    100% {
+        background-color: #2e562a;
+        box-shadow: 0 0 3px #2e562a
+    }
+    50% {
+        background-color: #b7db33;
+        box-shadow: 0 0 40px #b7db33
+    }
+}
+
+.liveLight {
+    padding: 10px 0 0
+}
+
+.WhiteBoxLeft,
+.WhiteBoxLeftGreen,
+.WhiteBoxLeftRed,
+.WhiteBoxRight {
+    padding: 0 25px
+}
+
+.centeredTop1Green {
+    left: 24%
+}
+
+.centeredTop1Red {
+    left: 74%
+}
+
+.centeredTop1,
+.centeredTop2,
+.centeredTop3,
+.centeredTop4,
+.centeredTop5,
+.centeredTop6 {
+    position: absolute;
+    top: 26.5%
+}
+
+.centeredTop1 {
+    left: 24.1%
+}
+
+.centeredTop2 {
+    left: 34.4%
+}
+
+.centeredTop3 {
+    left: 44.7%
+}
+
+.centeredTop4 {
+    left: 55%
+}
+
+.centeredTop5 {
+    left: 65%
+}
+
+.centeredTop6 {
+    left: 75%;
+    transform: translate(-50%, -50%)
+}
+
+.centeredRight,
+.centeredleft {
+    position: absolute;
+    top: 49%;
+    transform: translate(-50%, -50%)
+}
+
+.centeredleft {
+    left: 35%
+}
+
+.centeredRight {
+    left: 61.4%
+}
+
+.Luck,
+.Wish {
+    text-shadow: 0 20px 40px rgba(0, 0, 0, .3)
+}
+
+.activeDate {
+    color: #fff!important;
+    background: #08256d!important;
+    font-weight: 600!important
+}
+
+.FirstPrize,
+.Luck,
+.Wish {
+    font-family: 'Architects Daughter', cursive;
+    color: #fff
+}
+
+.Luck {
+    font-size: 4rem
+}
+
+.Wish {
+    margin-top: 70px;
+    font-size: 3.5rem;
+    line-height: 40px
+}
+
+.FirstPrize {
+    font-size: 35px;
+    margin-top: 30%;
+    font-weight: 100;
+    -webkit-animation: neon1 .5s ease-in-out infinite alternate;
+    -moz-animation: neon1 .5s ease-in-out infinite alternate;
+    animation: neon1 .5s ease-in-out infinite alternate
+}
+
+.ml15 .word {
+    display: inline-block;
+    line-height: 1em
+}
+
+.tableOfContent {
+    margin: 20px 0 50px
+}
+
+.time {
+    font-weight: 600;
+    color: #0f338e
+}
+
+.clock,
+.rtable th,
+label {
+    color: #fff
+}
+
+td {
+    font-size: 12px
+}
+
+.rtable {
+    display: inline-block;
+    vertical-align: top;
+    max-width: 100%;
+    overflow-x: auto;
+    border-radius: 8px;
+    white-space: nowrap;
+    border-collapse: collapse;
+    border-spacing: 0;
+    -webkit-box-shadow: 0 10px 43px -7px rgba(0, 0, 0, .75);
+    -moz-box-shadow: 0 10px 43px -7px rgba(0, 0, 0, .75);
+    box-shadow: 0 10px 43px -7px rgba(0, 0, 0, .75)
+}
+
+.rtable,
+.rtable--flip tbody {
+    -webkit-overflow-scrolling: touch;
+    background: radial-gradient(left, ellipse, rgba(0, 0, 0, .2) 0, rgba(0, 0, 0, 0) 75%) 0 center, radial-gradient(right, ellipse, rgba(0, 0, 0, .2) 0, rgba(0, 0, 0, 0) 75%) 100% center;
+    background-size: 10px 100%, 10px 100%;
+    background-attachment: scroll, scroll;
+    background-repeat: no-repeat
+}
+
+.rtable td:first-child,
+.rtable--flip tbody tr:first-child {
+    background-repeat: no-repeat;
+    background-size: 20px 100%
+}
+
+.rtable td:last-child,
+.rtable--flip tbody tr:last-child {
+    background-repeat: no-repeat;
+    background-position: 100% 0;
+    background-size: 20px 100%
+}
+
+.rtable th {
+    font-size: 11px;
+    text-align: center;
+    text-transform: uppercase;
+    background: #5c84ea
+}
+
+.rtable td,
+.rtable th {
+    padding: 8px 12px;
+    border: 1px solid #e8e8e4
+}
+
+.rtable--flip {
+    display: flex;
+    overflow: hidden;
+    background: 0 0
+}
+
+.rtable--flip thead {
+    display: flex;
+    flex-shrink: 0;
+    min-width: -webkit-min-content;
+    min-width: -moz-min-content;
+    min-width: min-content
+}
+
+.rtable--flip tbody {
+    display: flex;
+    position: relative;
+    overflow-x: auto;
+    overflow-y: hidden
+}
+
+.rtable--flip tr {
+    display: flex;
+    flex-direction: column;
+    min-width: -webkit-min-content;
+    min-width: -moz-min-content;
+    min-width: min-content;
+    flex-shrink: 0
+}
+
+.rtable--flip td,
+.rtable--flip th {
+    display: block
+}
+
+.rtable--flip td {
+    background-image: none!important;
+    border-left: 0
+}
+
+.rtable--flip td:not(:last-child),
+.rtable--flip th:not(:last-child) {
+    border-bottom: 0
+}
+
+.clockIndia,
+.clockLondon {
+    text-align: center;
+    color: #fff;
+    letter-spacing: 1px;
+    font-family: Orbitron;
+}
+
+.form-control,
+.form-control:focus,
+.form-control:hover {
+    display: block;
+    width: 100%;
+    height: 40px;
+    margin: 0;
+    padding: 0 12px;
+    border: 0 solid;
+    box-shadow: none;
+    border-bottom: 1px solid #fff;
+    border-radius: 4px;
+    background-color: #a2a2da;
+    color: #fff;
+    font-size: 15px;
+}
