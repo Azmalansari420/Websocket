@@ -1,0 +1,378 @@
+<?php include('headercss.php'); ?>
+
+<style>
+    section {
+    padding-top: 86px;
+    padding-bottom: 73px;
+    /* height: calc(100vh - 70px - 60px); */
+    overflow-y: auto;
+}
+</style>
+
+<body style="background-image: url(<?=base_url() ?>assets/bg2-img.jpg);
+    background-size: cover;
+    background-position: right;">
+
+    <?php include('top-bra.php'); ?>
+ 
+ <audio id="admusic" controls style="display:none;" preload='none'>
+    <source src="<?=base_url() ?>sound/slot-sound.mp3" type='audio/mp3'>
+</audio>
+
+    <section>
+        <div class="container">
+            
+            <div class="row">
+                <div class="col-xs-2">
+
+                </div>
+
+                
+                <div class="col-xs-8">
+                    <div class="ImgCenter">
+                        <img src="<?=base_url() ?>assets/galislot.png" style="margin-top:10%;" class="img-responsive">
+                        <div class="centeredTop1Green">
+                            <div class="WhiteBoxLeftGreen">
+                                <p style="margin:0;border-radius: 50%;padding: 8px;" id="glowGreen" class="buttonGreen"></p>
+                            </div>
+                        </div>
+                        <div class="centeredTop1Red">
+                            <div class="WhiteBoxLeftRed">
+                                <p style="margin:0;border-radius: 50%;padding: 8px;" id="glowRed" class="buttonRed GlowRed "></p>
+                            </div>
+                        </div>
+                        <div class="centeredTop1">
+                            <div class="WhiteBoxLeft">
+                                
+                                <img id="imgTop1" style="height:30px" src="<?=base_url() ?>image/Sm-Number/3.png" />
+                            </div>
+                        </div>
+                        <div class="centeredTop2">
+                            <div class="WhiteBoxLeft">
+                                <img id="imgTop2" style="height:30px" src="<?=base_url() ?>image/Sm-Number/4.png" />
+                            </div>
+                        </div>
+                        <div class="centeredTop3">
+                            <div class="WhiteBoxLeft">
+                                
+                                <img id="imgTop3" style="height:30px" src="<?=base_url() ?>image/Sm-Number/5.png" />
+                            </div>
+                        </div>
+                        <div class="centeredTop4">
+                            <div class="WhiteBoxLeft">
+                                <img id="imgTop4" style="height:30px" src="<?=base_url() ?>image/Sm-Number/1.png" />
+                            </div>
+                        </div>
+                        <div class="centeredTop5">
+                            <div class="WhiteBoxLeft">
+                                
+                                <img id="imgTop5" style="height:30px" src="<?=base_url() ?>image/Sm-Number/7.png" />
+                            </div>
+                        </div>
+                        <div class="centeredTop6">
+                            <div class="WhiteBoxLeft">
+                                <img id="imgTop6" style="height:30px" src="<?=base_url() ?>image/Sm-Number/9.png" />
+                            </div>
+                        </div>
+                        
+                        <div class="centeredleft">
+                            <div class="WhiteBoxLeft">                                
+                                <img id="imgShowNumberLeft" style="height:40px" src="<?=base_url() ?>image/Lg-Number/8.png" />
+                            </div>
+                        </div>
+                        <div class="centeredRight">
+                            <div class="WhiteBoxRight">
+                                <img id="imgShowNumberRight" style="height:40px" src="<?=base_url() ?>image/Lg-Number/8.png" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <?php
+                $this->db->where_not_in('game_id',59);
+                  $number = $this->db->get_where("game_times")->result_object();
+                  if(!empty($number))
+                  {
+                    foreach($number as $key => $data)
+                    {
+                        $this->db->where('DATE(create_on)', date('Y-m-d')); 
+                        $number = $this->db->get_where('number',array('game_id'=>$data->game_id,'game_time_id'=>$data->game_time_id))->result_object();
+                  ?>
+                <div class="col-xs-4">
+                    <div class="extrabtn" data-gametimeid="<?= $data->game_time_id ?>">
+                        <p style="margin:0"><span id="changed-no<?=$data->game_id ?>"><?=@$number[0]->number ?? '-' ; ?></span></p>
+                        <p style="margin:0"><?=gamename(@$data->game_id) ?? '-' ; ?></p>
+                        <p><?=date('h:i A',strtotime($data->gametime)) ?></p>
+                    </div>
+                </div>
+                <?php } } ?>
+
+                
+            </div>
+
+        </div>
+
+        <div class="bottom-footer">
+            <button onclick="window.location.href='gali-result.php'">See Result</button>
+        </div>
+
+    </section>
+
+<?php include('footerscript.php'); ?>
+<style>
+    /* Modal Background */
+.slot-modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.6);
+  transition: background-color 0.5s ease;
+}
+
+/* Modal Content Box */
+.slot-modal-content {
+  background: linear-gradient(145deg, #fff, #f0f0f0);
+  margin: 64% auto;
+  padding: 25px 20px;
+  border-radius: 15px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  position: relative;
+  transform: translateY(-100px);
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+/* Show Modal (trigger animation via JS by adding class) */
+.slot-modal.show {
+  display: block;
+}
+
+.slot-modal.show .slot-modal-content {
+  transform: translateY(0);
+  opacity: 1;
+  animation: popIn 0.5s forwards;
+}
+
+/* Pop-in Bounce */
+@keyframes popIn {
+  0% { transform: scale(0); opacity: 0; }
+  60% { transform: scale(1.2); opacity: 1; }
+  80% { transform: scale(0.95); }
+  100% { transform: scale(1); }
+}
+
+/* Close Button */
+.slot-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.slot-close:hover {
+  color: #e74c3c;
+}
+
+/* Title */
+.slot-modal-content h2 {
+  margin-top: 10px;
+  font-size: 22px;
+  color: #27ae60;
+  letter-spacing: 1px;
+}
+
+/* Number Display */
+#modalNumber {
+  font-size: 48px;
+  font-weight: bold;
+  color: #3498db;
+  margin: 15px 0 0 0;
+  animation: numberPop 0.6s ease;
+}
+
+@keyframes numberPop {
+  0% { transform: scale(0); opacity: 0; }
+  60% { transform: scale(1.3); opacity: 1; }
+  80% { transform: scale(0.95); }
+  100% { transform: scale(1); }
+}
+
+</style>
+
+<div id="slotModal" class="slot-modal">
+  <div class="slot-modal-content">
+    <span class="slot-close">&times;</span>
+    <h2>Number Opened!</h2>
+    <p id="modalNumber">00</p>
+  </div>
+</div>
+
+<?php
+// latest निकला हुआ number लाओ (आज का)
+$last_number = $this->db
+    ->where('DATE(create_on)', date('Y-m-d'))
+    ->where_not_in('game_id', [59])
+    ->order_by('id', 'DESC')
+    ->limit(1)
+    ->get('number')
+    ->row();
+
+
+$last_no = $last_number ? str_pad($last_number->number, 2, "0", STR_PAD_LEFT) : "00";
+    // print_r($last_no);
+    // die;
+?>
+
+
+
+
+<script>
+ let ws = new WebSocket("<?=socketURL?>");
+
+ws.onopen = () => {
+  console.log("Connected to WebSocket");
+};
+
+ws.onmessage = (event) => {
+  if (event.data instanceof Blob) {
+    event.data.text().then((text) => {
+      handleMessage(text);
+    });
+  } else {
+    handleMessage(event.data);
+  }
+};
+
+// ---------------- MODAL ----------------
+const slotModal = document.getElementById("slotModal");
+const modalNumber = document.getElementById("modalNumber");
+const spanClose = document.querySelector(".slot-close");
+var currentNumber = 0;
+var currentgameid = 0;
+
+function showModal(number) {
+  modalNumber.textContent = number;
+  slotModal.classList.add('show');
+
+  $("#changed-no"+currentgameid).text(currentNumber);
+
+
+}
+spanClose.onclick = () => slotModal.classList.remove('show');
+window.onclick = (event) => {
+  if (event.target == slotModal) slotModal.classList.remove('show');
+};
+
+// ---------------- SLOT MACHINE ----------------
+let interval;
+const numbers = [1,2,3,4,5,6,7,8,9];
+let spinIndex = 0;
+
+function handleMessage(message) {
+  try {
+    let data = JSON.parse(message);
+    console.log("Received:", data);
+
+    currentNumber = data.number;
+    currentgameid = data.game_id;
+
+    if (data.game_id !== '59') {
+      // 1. Update list
+      const allGameTimeDivs = document.querySelectorAll(".extrabtn");
+      allGameTimeDivs.forEach(div => {
+        const gameTimeIdAttr = div.getAttribute("data-gametimeid");
+        if (gameTimeIdAttr == data.game_time_id) {
+          const pNumber = div.querySelector("p:first-child");
+          if (pNumber) pNumber.textContent = data.number;
+        }
+      });
+
+
+
+      // 2. Animate slot machine
+      startSlot(data.randno); 
+      setTimeout(() => stopSlot(data.number), 3000);
+    }
+  } catch (e) {
+    console.error("Invalid JSON:", message);
+  }
+}
+
+function startSlot(randno) {
+  if (window.ReactNativeWebView) {
+    window.ReactNativeWebView.postMessage(JSON.stringify({ type: 'slot_start' }));
+  }
+
+  let sound = document.getElementById("admusic");
+  if (sound) {
+    sound.currentTime = 0;
+    sound.play().catch(e => console.log("Audio play blocked", e));
+  }
+
+  clearInterval(interval);
+  spinIndex = 0;
+  const topDigits = randno.toString().padStart(6, "0").split("");
+
+  interval = setInterval(() => {
+    for (let i = 0; i < 6; i++) {
+      let displayDigit = numbers[Math.floor(Math.random() * numbers.length)];
+      if (spinIndex > 20) displayDigit = topDigits[i];
+      document.getElementById("imgTop" + (i+1)).src = "<?=base_url()?>image/Sm-Number/" + displayDigit + ".png";
+    }
+
+    let randLeft = numbers[Math.floor(Math.random() * numbers.length)];
+    let randRight = numbers[Math.floor(Math.random() * numbers.length)];
+    document.getElementById("imgShowNumberLeft").src = "<?=base_url()?>image/Lg-Number/" + randLeft + ".png";
+    document.getElementById("imgShowNumberRight").src = "<?=base_url()?>image/Lg-Number/" + randRight + ".png";
+
+    spinIndex++;
+    if (spinIndex > 25) clearInterval(interval);
+  }, 100);
+}
+
+function stopSlot(number) {
+  clearInterval(interval);
+
+  let digits = number.toString().padStart(2, "0").split("");
+  let left = digits[0];
+  let right = digits[1];
+
+  // Final result show
+  document.getElementById("imgShowNumberLeft").src = "<?=base_url()?>image/Lg-Number/" + left + ".png";
+  document.getElementById("imgShowNumberRight").src = "<?=base_url()?>image/Lg-Number/" + right + ".png";
+
+  // Save to localStorage
+  localStorage.setItem("lastResult", number);
+
+  // Show modal
+  showModal(left + right);
+}
+
+// ---------------- PAGE LOAD पर LAST RESULT RESTORE ----------------
+window.addEventListener("load", () => {
+  let lastResult = localStorage.getItem("lastResult");
+
+  if (lastResult) {
+    let digits = lastResult.toString().padStart(2, "0").split("");
+    document.getElementById("imgShowNumberLeft").src = "<?=base_url()?>image/Lg-Number/" + digits[0] + ".png";
+    document.getElementById("imgShowNumberRight").src = "<?=base_url()?>image/Lg-Number/" + digits[1] + ".png";
+  } else {
+    // अगर localStorage empty है → PHP से मिले last number से set करो
+    let phpLast = "<?=$last_no?>";
+    let digits = phpLast.toString().padStart(2, "0").split("");
+    document.getElementById("imgShowNumberLeft").src = "<?=base_url()?>image/Lg-Number/" + digits[0] + ".png";
+    document.getElementById("imgShowNumberRight").src = "<?=base_url()?>image/Lg-Number/" + digits[1] + ".png";
+  }
+});
+</script>
