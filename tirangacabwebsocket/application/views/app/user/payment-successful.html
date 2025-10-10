@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+   
+<!-- Mirrored from askbootstrap.com/preview/busgo-demo/payment-successful.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 14 Jun 2025 07:09:43 GMT -->
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="icon" href="img/logo.png" type="image/png">
+      <title>BusGo - Bus Booking HTML Mobile App Template</title>
+      <!-- Bootstrap css -->
+      <link rel="stylesheet" href="vender/bootstrap/css/bootstrap.min.css">
+      <!-- Custom css -->
+      <link rel="stylesheet" href="css/style.css">
+   </head>
+   <body>
+      <!-- Status Bar -->
+      <div class="status-bar">
+         <div>9:41 AM</div>
+         <div>
+            <i class="bi bi-wifi"></i>
+            <i class="bi bi-battery-full ms-2"></i>
+         </div>
+      </div>
+      <!-- Sidebar -->
+      <div class="sidebar" id="sidebar">
+         <div class="sidebar-header">
+            <div class="d-flex align-items-center mb-3">
+               <div class="user-avatar me-3">
+                  <i class="bi bi-person"></i>
+               </div>
+               <div>
+                  <h6 class="mb-1">Alex Johnson</h6>
+                  <p class="mb-0 small">Premium Member</p>
+               </div>
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+               <div>
+                  <small>Travel Points</small>
+                  <div class="d-flex align-items-center">
+                     <i class="bi bi-star-fill me-1 points-icon"></i>
+                     <span>2,450</span>
+                  </div>
+               </div>
+               <a href="profile.html" class="btn btn-sm profile-edit-btn rounded-3">
+               Edit Profile
+               </a>
+            </div>
+         </div>
+         <div class="sidebar-menu">
+            <a href="index.html" class="sidebar-menu-item">
+            <i class="bi bi-house-door"></i>
+            <span>Home</span>
+            </a>
+            <a href="bus-listing.html" class="sidebar-menu-item">
+            <i class="bi bi-list"></i>
+            <span>Bus Listing</span>
+            </a>
+            <a href="bus-details.html" class="sidebar-menu-item">
+            <i class="bi bi-view-list"></i>
+            <span>Bus Details</span>
+            </a>
+            <a href="select-seat.html" class="sidebar-menu-item">
+            <i class="bi bi-ui-checks-grid"></i>
+            <span>Select Seat</span>
+            </a>
+            <a href="verification.html" class="sidebar-menu-item">
+            <i class="bi bi-person-check"></i>
+            <span>Verification</span>
+            </a>
+            <a href="checkout-payment.html" class="sidebar-menu-item">
+            <i class="bi bi-credit-card-2-front"></i>
+            <span>Checkout Payment</span>
+            </a>
+            <a href="payment-successful.html" class="sidebar-menu-item">
+            <i class="bi bi-calendar2-check"></i>
+            <span>Payment Successful</span>
+            </a>
+            <a href="my-tickets.html" class="sidebar-menu-item">
+            <i class="bi bi-ticket-detailed"></i>
+            <span>My Tickets</span>
+            </a>
+            <a href="profile.html" class="sidebar-menu-item">
+            <i class="bi bi-person"></i>
+            <span>Profile</span>
+            </a>
+            <a href="my-bookings.html" class="sidebar-menu-item">
+            <i class="bi bi-ticket-perforated"></i>
+            <span>My Bookings</span>
+            </a>
+            <a href="trip-history.html" class="sidebar-menu-item">
+            <i class="bi bi-clock-history"></i>
+            <span>Trip History</span>
+            </a>
+            <a href="saved-routes.html" class="sidebar-menu-item">
+            <i class="bi bi-heart"></i>
+            <span>Saved Routes</span>
+            </a>
+            <a href="offers-rewards.html" class="sidebar-menu-item">
+            <i class="bi bi-gift"></i>
+            <span>Offers & Rewards</span>
+            </a>
+            <a href="payment-methods.html" class="sidebar-menu-item">
+            <i class="bi bi-credit-card"></i>
+            <span>Payment Methods</span>
+            </a>
+            <a href="notifications.html" class="sidebar-menu-item">
+            <i class="bi bi-bell"></i>
+            <span>Notifications</span>
+            </a>
+            <a href="settings.html" class="sidebar-menu-item">
+            <i class="bi bi-gear"></i>
+            <span>Settings</span>
+            </a>
+            <a href="help-support.html" class="sidebar-menu-item">
+            <i class="bi bi-question-circle"></i>
+            <span>Help & Support</span>
+            </a>
+            <a href="search.html" class="sidebar-menu-item">
+            <i class="bi bi-search"></i>
+            <span>Search</span>
+            </a>
+            <a href="sign-in.html" class="sidebar-menu-item">
+            <i class="bi bi-box-arrow-in-right"></i>
+            <span>Sign In</span>
+            </a>
+            <a href="sign-up.html" class="sidebar-menu-item">
+            <i class="bi bi-box-arrow-in-left"></i>
+            <span>Sign Up</span>
+            </a>
+            <a href="forgot-password.html" class="sidebar-menu-item">
+            <i class="bi bi-key"></i>
+            <span>Forgot Password</span>
+            </a>
+            <a href="not-available.html" class="sidebar-menu-item">
+            <i class="bi bi-emoji-frown"></i>
+            <span>Not Available</span>
+            </a>
+         </div>
+         <div class="p-3 text-center">
+            <a href="sign-in.html" class="btn btn-outline-danger w-100 rounded-3">
+            <i class="bi bi-box-arrow-right me-2"></i> Sign Out
+            </a>
+         </div>
+      </div>
+      <!-- Overlay -->
+      <div class="overlay" id="overlay"></div>
+      <!-- App Header -->
+      <div class="app-header d-flex justify-content-between align-items-center">
+         <div class="d-flex align-items-center">
+            <button id="menuBtn" class="btn menu-btn">
+            <i class="bi bi-list menu-icon"></i>
+            </button>
+            <div class="d-flex align-items-center">
+               <i class="bi bi-ticket-perforated me-2 app-header-icon"></i>
+               <span class="app-header-title">My Bookings</span>
+            </div>
+         </div>
+         <div>
+            <a href="search.html" class="btn header-btn me-2">
+            <i class="bi bi-search icon-md"></i>
+            </a>
+            <a href="notifications.html" class="btn header-btn me-2">
+            <i class="bi bi-bell icon-md"></i>
+            </a>
+            <a href="settings.html" class="btn header-btn">
+            <i class="bi bi-person-circle icon-md"></i>
+            </a>
+         </div>
+      </div>
+      <!-- Content Container -->
+      <div class="p-3">
+         <!-- Booking Progress -->
+         <div class="booking-progress d-flex justify-content-between mb-4">
+            <div class="progress-step completed">
+               <div class="step-dot"></div>
+               <div class="step-label small">Seats</div>
+            </div>
+            <div class="progress-connector completed"></div>
+            <div class="progress-step completed">
+               <div class="step-dot"></div>
+               <div class="step-label small">Verify</div>
+            </div>
+            <div class="progress-connector completed"></div>
+            <div class="progress-step completed">
+               <div class="step-dot"></div>
+               <div class="step-label small">Payment</div>
+            </div>
+            <div class="progress-connector completed"></div>
+            <div class="progress-step completed">
+               <div class="step-dot"></div>
+               <div class="step-label small">Ticket</div>
+            </div>
+         </div>
+         <!-- Success Message -->
+         <div class="success-message text-center mb-5">
+            <div class="success-icon mb-3">
+               <i class="bi bi-check-circle"></i>
+            </div>
+            <h4 class="fw-bold mb-2">Payment Successful!</h4>
+            <p class="text-muted">Your booking has been confirmed. Ticket details have been sent to your email.</p>
+         </div>
+         <!-- Booking Details -->
+         <div class="booking-details mb-4">
+            <div class="booking-card p-3 rounded-3 bg-primary-light mb-3">
+               <h6 class="fw-bold mb-3">Booking Information</h6>
+               <div class="d-flex justify-content-between mb-2">
+                  <div class="text-muted">Booking ID</div>
+                  <div class="fw-medium">BUS-23456789</div>
+               </div>
+               <div class="d-flex justify-content-between mb-2">
+                  <div class="text-muted">Booking Date</div>
+                  <div>June 10, 2025</div>
+               </div>
+               <div class="d-flex justify-content-between mb-2">
+                  <div class="text-muted">Payment Method</div>
+                  <div>Visa •••• 4321</div>
+               </div>
+               <div class="d-flex justify-content-between">
+                  <div class="text-muted">Amount Paid</div>
+                  <div class="fw-bold text-primary-color">$90.50</div>
+               </div>
+            </div>
+            <div class="trip-card p-3 rounded-3 bg-primary-light">
+               <h6 class="fw-bold mb-3">Trip Details</h6>
+               <!-- Bus Info -->
+               <div class="d-flex align-items-center mb-3">
+                  <div class="bus-icon me-3">
+                     <i class="bi bi-bus-front"></i>
+                  </div>
+                  <div>
+                     <h6 class="fw-bold mb-0">Express Lines</h6>
+                     <div class="text-muted small">Premium Sleeper</div>
+                  </div>
+               </div>
+               <!-- Journey Details -->
+               <div class="journey-details mb-3">
+                  <div class="d-flex mb-3">
+                     <div class="journey-stops me-3">
+                        <div class="departure-stop"></div>
+                        <div class="journey-line"></div>
+                        <div class="arrival-stop"></div>
+                     </div>
+                     <div class="journey-info flex-grow-1">
+                        <div class="mb-3">
+                           <div class="fw-bold">New York Central Station</div>
+                           <div class="text-muted small">Jun 15, 07:00 AM</div>
+                        </div>
+                        <div>
+                           <div class="fw-bold">Boston South Station</div>
+                           <div class="text-muted small">Jun 15, 11:30 AM</div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- Passenger & Seat Details -->
+               <div class="row mb-3">
+                  <div class="col-6">
+                     <div class="text-muted small mb-1">Passenger</div>
+                     <div class="fw-medium">John Doe</div>
+                  </div>
+                  <div class="col-6">
+                     <div class="text-muted small mb-1">Seats</div>
+                     <div class="fw-medium">B1, B2</div>
+                  </div>
+               </div>
+               <!-- Additional Info -->
+               <div class="additional-info bg-white p-2 rounded-3 small">
+                  <div class="mb-1"><i class="bi bi-info-circle me-1 text-primary-color"></i> Please arrive 30 minutes before departure</div>
+                  <div><i class="bi bi-bag me-1 text-primary-color"></i> Luggage allowance: 2 pieces (up to 20kg each)</div>
+               </div>
+            </div>
+         </div>
+         <!-- Action Buttons -->
+         <div class="action-buttons d-grid gap-2">
+            <a href="my-tickets.html" class="btn btn-app">View Ticket</a>
+            <a href="#" class="btn btn-outline-secondary rounded-3">Download PDF Ticket</a>
+            <a href="index.html" class="btn btn-outline-secondary rounded-3">Back to Home</a>
+         </div>
+         <!-- Share Trip -->
+         <div class="share-trip text-center mt-4">
+            <p class="text-muted small mb-2">Share your trip details</p>
+            <div class="social-share d-flex justify-content-center gap-3">
+               <a href="#" class="btn btn-sm btn-outline-secondary rounded-circle">
+               <i class="bi bi-whatsapp"></i>
+               </a>
+               <a href="#" class="btn btn-sm btn-outline-secondary rounded-circle">
+               <i class="bi bi-facebook"></i>
+               </a>
+               <a href="#" class="btn btn-sm btn-outline-secondary rounded-circle">
+               <i class="bi bi-twitter"></i>
+               </a>
+               <a href="#" class="btn btn-sm btn-outline-secondary rounded-circle">
+               <i class="bi bi-envelope"></i>
+               </a>
+            </div>
+         </div>
+      </div>
+      <!-- Bottom Navigation Bar (App-style) -->
+      <div class="bottom-nav">
+         <a href="index.html" class="nav-item">
+         <i class="bi bi-house-door-fill"></i>
+         <span>Home</span>
+         </a>
+         <a href="search.html" class="nav-item">
+         <i class="bi bi-search"></i>
+         <span>Search</span>
+         </a>
+         <a href="my-bookings.html" class="nav-item">
+         <i class="bi bi-ticket-perforated"></i>
+         <span>My Tickets</span>
+         </a>
+         <a href="offers-rewards.html" class="nav-item">
+         <i class="bi bi-gift"></i>
+         <span>Offers</span>
+         </a>
+         <a href="settings.html" class="nav-item">
+         <i class="bi bi-person"></i>
+         <span>Profile</span>
+         </a>
+      </div>
+      <!-- Bootstrap bundle js -->
+      <script src="vender/bootstrap/js/bootstrap.bundle.min.js" type="a6c7f7213b473e91265da5c3-text/javascript"></script>
+      <!-- Script js -->
+      <script src="js/script.js" type="a6c7f7213b473e91265da5c3-text/javascript"></script> 
+   <script src="../../cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="a6c7f7213b473e91265da5c3-|49" defer></script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"94f80033ee82fce7","version":"2025.6.2","r":1,"serverTiming":{"name":{"cfExtPri":true,"cfEdge":true,"cfOrigin":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"token":"dd471ab1978346bbb991feaa79e6ce5c","b":1}' crossorigin="anonymous"></script>
+</body>
+
+<!-- Mirrored from askbootstrap.com/preview/busgo-demo/payment-successful.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 14 Jun 2025 07:09:43 GMT -->
+</html>

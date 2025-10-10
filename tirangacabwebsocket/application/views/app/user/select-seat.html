@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+   
+<!-- Mirrored from askbootstrap.com/preview/busgo-demo/select-seat.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 14 Jun 2025 07:09:43 GMT -->
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="icon" href="img/logo.png" type="image/png">
+      <title>BusGo - Bus Booking HTML Mobile App Template</title>
+      <!-- Bootstrap css -->
+      <link rel="stylesheet" href="vender/bootstrap/css/bootstrap.min.css">
+      <!-- Custom css -->
+      <link rel="stylesheet" href="css/style.css">
+   </head>
+   <body>
+      <!-- Status Bar -->
+      <div class="status-bar">
+         <div>9:41 AM</div>
+         <div>
+            <i class="bi bi-wifi"></i>
+            <i class="bi bi-battery-full ms-2"></i>
+         </div>
+      </div>
+      <!-- Sidebar -->
+      <div class="sidebar" id="sidebar">
+         <div class="sidebar-header">
+            <div class="d-flex align-items-center mb-3">
+               <div class="user-avatar me-3">
+                  <i class="bi bi-person"></i>
+               </div>
+               <div>
+                  <h6 class="mb-1">Alex Johnson</h6>
+                  <p class="mb-0 small">Premium Member</p>
+               </div>
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+               <div>
+                  <small>Travel Points</small>
+                  <div class="d-flex align-items-center">
+                     <i class="bi bi-star-fill me-1 points-icon"></i>
+                     <span>2,450</span>
+                  </div>
+               </div>
+               <a href="profile.html" class="btn btn-sm profile-edit-btn rounded-3">
+               Edit Profile
+               </a>
+            </div>
+         </div>
+         <div class="sidebar-menu">
+            <a href="index.html" class="sidebar-menu-item">
+            <i class="bi bi-house-door"></i>
+            <span>Home</span>
+            </a>
+            <a href="bus-listing.html" class="sidebar-menu-item">
+            <i class="bi bi-list"></i>
+            <span>Bus Listing</span>
+            </a>
+            <a href="bus-details.html" class="sidebar-menu-item">
+            <i class="bi bi-view-list"></i>
+            <span>Bus Details</span>
+            </a>
+            <a href="select-seat.html" class="sidebar-menu-item">
+            <i class="bi bi-ui-checks-grid"></i>
+            <span>Select Seat</span>
+            </a>
+            <a href="verification.html" class="sidebar-menu-item">
+            <i class="bi bi-person-check"></i>
+            <span>Verification</span>
+            </a>
+            <a href="checkout-payment.html" class="sidebar-menu-item">
+            <i class="bi bi-credit-card-2-front"></i>
+            <span>Checkout Payment</span>
+            </a>
+            <a href="payment-successful.html" class="sidebar-menu-item">
+            <i class="bi bi-calendar2-check"></i>
+            <span>Payment Successful</span>
+            </a>
+            <a href="my-tickets.html" class="sidebar-menu-item">
+            <i class="bi bi-ticket-detailed"></i>
+            <span>My Tickets</span>
+            </a>
+            <a href="profile.html" class="sidebar-menu-item">
+            <i class="bi bi-person"></i>
+            <span>Profile</span>
+            </a>
+            <a href="my-bookings.html" class="sidebar-menu-item">
+            <i class="bi bi-ticket-perforated"></i>
+            <span>My Bookings</span>
+            </a>
+            <a href="trip-history.html" class="sidebar-menu-item">
+            <i class="bi bi-clock-history"></i>
+            <span>Trip History</span>
+            </a>
+            <a href="saved-routes.html" class="sidebar-menu-item">
+            <i class="bi bi-heart"></i>
+            <span>Saved Routes</span>
+            </a>
+            <a href="offers-rewards.html" class="sidebar-menu-item">
+            <i class="bi bi-gift"></i>
+            <span>Offers & Rewards</span>
+            </a>
+            <a href="payment-methods.html" class="sidebar-menu-item">
+            <i class="bi bi-credit-card"></i>
+            <span>Payment Methods</span>
+            </a>
+            <a href="notifications.html" class="sidebar-menu-item">
+            <i class="bi bi-bell"></i>
+            <span>Notifications</span>
+            </a>
+            <a href="settings.html" class="sidebar-menu-item">
+            <i class="bi bi-gear"></i>
+            <span>Settings</span>
+            </a>
+            <a href="help-support.html" class="sidebar-menu-item">
+            <i class="bi bi-question-circle"></i>
+            <span>Help & Support</span>
+            </a>
+            <a href="search.html" class="sidebar-menu-item">
+            <i class="bi bi-search"></i>
+            <span>Search</span>
+            </a>
+            <a href="sign-in.html" class="sidebar-menu-item">
+            <i class="bi bi-box-arrow-in-right"></i>
+            <span>Sign In</span>
+            </a>
+            <a href="sign-up.html" class="sidebar-menu-item">
+            <i class="bi bi-box-arrow-in-left"></i>
+            <span>Sign Up</span>
+            </a>
+            <a href="forgot-password.html" class="sidebar-menu-item">
+            <i class="bi bi-key"></i>
+            <span>Forgot Password</span>
+            </a>
+            <a href="not-available.html" class="sidebar-menu-item">
+            <i class="bi bi-emoji-frown"></i>
+            <span>Not Available</span>
+            </a>
+         </div>
+         <div class="p-3 text-center">
+            <a href="sign-in.html" class="btn btn-outline-danger w-100 rounded-3">
+            <i class="bi bi-box-arrow-right me-2"></i> Sign Out
+            </a>
+         </div>
+      </div>
+      <!-- Overlay -->
+      <div class="overlay" id="overlay"></div>
+      <!-- App Header -->
+      <div class="app-header d-flex justify-content-between align-items-center">
+         <div class="d-flex align-items-center">
+            <div class="d-flex align-items-center">
+               <a href="bus-details.html" class="back-link text-white">
+               <i class="bi bi-arrow-left me-3 app-header-icon"></i>
+               </a>
+               <span class="app-header-title">Select Seats</span>
+            </div>
+         </div>
+         <div>
+            <a href="search.html" class="btn header-btn me-2">
+            <i class="bi bi-search icon-md"></i>
+            </a>
+            <a href="notifications.html" class="btn header-btn me-2">
+            <i class="bi bi-bell icon-md"></i>
+            </a>
+            <a href="settings.html" class="btn header-btn">
+            <i class="bi bi-person-circle icon-md"></i>
+            </a>
+         </div>
+      </div>
+      <!-- Content Container -->
+      <div class="p-3">
+         <!-- Bus Info Summary -->
+         <div class="bus-summary d-flex align-items-center p-3 bg-primary-light rounded-3 mb-4">
+            <div class="bus-icon me-3">
+               <i class="bi bi-bus-front"></i>
+            </div>
+            <div class="flex-grow-1">
+               <h6 class="fw-bold mb-1">Express Lines</h6>
+               <div class="d-flex text-muted small gap-2">
+                  <span>Premium Sleeper</span>
+                  <span>•</span>
+                  <span>Jun 15, 07:00 AM</span>
+               </div>
+            </div>
+         </div>
+         <!-- Seat Layout -->
+         <div class="seat-layout mb-4">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+               <h6 class="fw-bold mb-0">Select Your Seats</h6>
+               <div class="seat-deck-selector">
+                  <div class="btn-group btn-group-sm gap-1" role="group">
+                     <input type="radio" class="btn-check" name="deck" id="lowerDeck" checked>
+                     <label class="btn btn-outline-secondary fs-11 rounded-3" for="lowerDeck">Lower Deck</label>
+                     <input type="radio" class="btn-check" name="deck" id="upperDeck">
+                     <label class="btn btn-outline-secondary fs-11 rounded-3" for="upperDeck">Upper Deck</label>
+                  </div>
+               </div>
+            </div>
+            <!-- Bus Layout Diagram -->
+            <div class="bus-layout shadow-sm border p-3 bg-light rounded-3 mb-3">
+               <!-- Driver Section -->
+               <div class="driver-section d-flex justify-content-between align-items-center mb-4">
+                  <div class="steering-wheel">
+                     <i class="bi bi-circle"></i>
+                  </div>
+                  <div class="driver-text small text-muted">Driver</div>
+                  <div class="door">
+                     <div class="door-text small text-muted">Door</div>
+                  </div>
+               </div>
+               <!-- Seats Grid -->
+               <div class="seats-grid p-0">
+                  <!-- Row 1 -->
+                  <div class="seat-row d-flex justify-content-between mb-3">
+                     <div class="seat available" data-seat="A1">A1</div>
+                     <div class="seat available" data-seat="A2">A2</div>
+                     <div class="seat-gap"></div>
+                     <div class="seat booked" data-seat="A3">A3</div>
+                     <div class="seat booked" data-seat="A4">A4</div>
+                  </div>
+                  <!-- Row 2 -->
+                  <div class="seat-row d-flex justify-content-between mb-3">
+                     <div class="seat selected" data-seat="B1">B1</div>
+                     <div class="seat selected" data-seat="B2">B2</div>
+                     <div class="seat-gap"></div>
+                     <div class="seat booked" data-seat="B3">B3</div>
+                     <div class="seat booked" data-seat="B4">B4</div>
+                  </div>
+                  <!-- Row 3 -->
+                  <div class="seat-row d-flex justify-content-between mb-3">
+                     <div class="seat available" data-seat="C1">C1</div>
+                     <div class="seat available" data-seat="C2">C2</div>
+                     <div class="seat-gap"></div>
+                     <div class="seat available" data-seat="C3">C3</div>
+                     <div class="seat available" data-seat="C4">C4</div>
+                  </div>
+                  <!-- Row 4 -->
+                  <div class="seat-row d-flex justify-content-between mb-3">
+                     <div class="seat available" data-seat="D1">D1</div>
+                     <div class="seat available" data-seat="D2">D2</div>
+                     <div class="seat-gap"></div>
+                     <div class="seat available" data-seat="D3">D3</div>
+                     <div class="seat booked" data-seat="D4">D4</div>
+                  </div>
+                  <!-- Row 5 -->
+                  <div class="seat-row d-flex justify-content-between mb-3">
+                     <div class="seat booked" data-seat="E1">E1</div>
+                     <div class="seat booked" data-seat="E2">E2</div>
+                     <div class="seat-gap"></div>
+                     <div class="seat available" data-seat="E3">E3</div>
+                     <div class="seat available" data-seat="E4">E4</div>
+                  </div>
+                  <!-- Row 6 -->
+                  <div class="seat-row d-flex justify-content-between mb-3">
+                     <div class="seat available" data-seat="F1">F1</div>
+                     <div class="seat available" data-seat="F2">F2</div>
+                     <div class="seat-gap"></div>
+                     <div class="seat available" data-seat="F3">F3</div>
+                     <div class="seat available" data-seat="F4">F4</div>
+                  </div>
+                  <!-- Row 7 -->
+                  <div class="seat-row d-flex justify-content-between mb-3">
+                     <div class="seat available" data-seat="G1">G1</div>
+                     <div class="seat available" data-seat="G2">G2</div>
+                     <div class="seat-gap"></div>
+                     <div class="seat available" data-seat="G3">G3</div>
+                     <div class="seat available" data-seat="G4">G4</div>
+                  </div>
+                  <!-- Row 8 -->
+                  <div class="seat-row d-flex justify-content-between">
+                     <div class="seat available" data-seat="H1">H1</div>
+                     <div class="seat available" data-seat="H2">H2</div>
+                     <div class="seat-gap"></div>
+                     <div class="seat available" data-seat="H3">H3</div>
+                     <div class="seat available" data-seat="H4">H4</div>
+                  </div>
+               </div>
+            </div>
+            <!-- Seat Legend -->
+            <div class="seat-legend d-flex justify-content-between">
+               <div class="legend-item d-flex align-items-center">
+                  <div class="legend-dot available"></div>
+                  <span class="small text-muted">Available</span>
+               </div>
+               <div class="legend-item d-flex align-items-center">
+                  <div class="legend-dot selected"></div>
+                  <span class="small text-muted">Selected</span>
+               </div>
+               <div class="legend-item d-flex align-items-center">
+                  <div class="legend-dot booked"></div>
+                  <span class="small text-muted">Booked</span>
+               </div>
+            </div>
+         </div>
+         <!-- Selected Seats -->
+         <div class="selected-seats mb-4">
+            <h6 class="fw-bold mb-3">Your Selected Seats</h6>
+            <div class="selected-seat-list">
+               <div class="selected-seat-item d-flex justify-content-between align-items-center p-3 bg-primary-light rounded-3 mb-2">
+                  <div class="d-flex align-items-center">
+                     <div class="seat-number me-3">B1</div>
+                     <div>
+                        <div class="fw-medium">Window Seat</div>
+                        <div class="text-muted small">Lower Deck</div>
+                     </div>
+                  </div>
+                  <div class="d-flex align-items-center">
+                     <div class="seat-price me-2">$45.00</div>
+                     <button class="btn btn-sm btn-outline-danger remove-seat rounded-3">
+                     <i class="bi bi-x-lg"></i>
+                     </button>
+                  </div>
+               </div>
+               <div class="selected-seat-item d-flex justify-content-between align-items-center p-3 bg-primary-light rounded-3">
+                  <div class="d-flex align-items-center">
+                     <div class="seat-number me-3">B2</div>
+                     <div>
+                        <div class="fw-medium">Aisle Seat</div>
+                        <div class="text-muted small">Lower Deck</div>
+                     </div>
+                  </div>
+                  <div class="d-flex align-items-center">
+                     <div class="seat-price me-2">$45.00</div>
+                     <button class="btn btn-sm btn-outline-danger remove-seat rounded-3">
+                     <i class="bi bi-x-lg"></i>
+                     </button>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- Bottom Fixed Bar for Price and Continue -->
+      <div class="bottom-fixed-bar p-3">
+         <div class="d-flex justify-content-between align-items-center gap-3">
+            <div class="lh-sm">
+               <div class="fw-bold fs-5 text-primary-color">$900.00</div>
+               <div class="text-muted small">2 selected</div>
+            </div>
+            <a href="verification.html" class="btn btn-app py-2 fw-bold">Continue</a>
+         </div>
+      </div>
+      <!-- Bootstrap bundle js -->
+      <script src="vender/bootstrap/js/bootstrap.bundle.min.js" type="854b5637f45bffaf9842649a-text/javascript"></script>
+      <!-- Script js -->
+      <script src="js/script.js" type="854b5637f45bffaf9842649a-text/javascript"></script> 
+   <script src="../../cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="854b5637f45bffaf9842649a-|49" defer></script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"94f8001e2bb8fe1a","version":"2025.6.2","r":1,"serverTiming":{"name":{"cfExtPri":true,"cfEdge":true,"cfOrigin":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"token":"dd471ab1978346bbb991feaa79e6ce5c","b":1}' crossorigin="anonymous"></script>
+</body>
+
+<!-- Mirrored from askbootstrap.com/preview/busgo-demo/select-seat.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 14 Jun 2025 07:09:43 GMT -->
+</html>
